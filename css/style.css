@@ -1,3 +1,128 @@
 body{
     font-family: "Poppins", sans-serif;
+    margin:0;
+    padding: 0;
+    
 }
+
+.container{
+    max-width: 1440px !important;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+
+.row{
+    display: flex !important;
+    flex-wrap: wrap!important;
+}
+
+.col-100{
+    width: 100%;
+}
+.col-50{
+    width: 50%;
+}
+.col-33{
+    width: 33.33%;
+}
+
+/*menu*/
+li {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  nav {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    font-size: 15px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  #icons {
+    cursor: pointer;
+    display: none;
+  }
+
+
+  
+ 
+
+/* banner */
+
+.banner{
+margin-bottom: 150px !important;
+}
+
+.banner img{
+    width: 100%;
+}
+.banner h1{
+    color: #ffffff;
+    text-align: end;
+    margin-top: -200px;
+    font-size: 35px
+}
+.banner h1 span{
+    color:rgb(231, 231, 10);
+    font-size: 40px;
+}
+
+/* team */
+
+
+.team-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    /* menu responsive */
+    #icons {
+      display: block;
+    }
+    #icons:before {
+      content: "\2630";
+    }
+    .active #icons:before {
+      content: "\2715";
+    }
+    nav ul {
+      position: fixed;
+      left: -100%;
+      top: 5%;
+      flex-direction: column;
+      background: skyblue;
+      width: 100%;
+      text-align: center;
+      transition: 0.25s;
+    }
+    nav li {
+      padding: 3px 0;
+    }
+    nav li:hover {
+      background: rgb(157, 217, 240);
+    }
+    nav.active ul {
+      left: 0;
+    }
+  }
